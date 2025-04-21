@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natural Portfolio</title>
+  <style>
+    :root {
+      --background: #FAF3E0;
+      --text-color: #2C2C2C;
+      --accent-color: #A1866F;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--background);
+      color: var(--text-color);
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: var(--accent-color);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: white;
+    }
+
+    .sidebar h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .sidebar p.title {
+      margin: 0.5rem 0 2rem;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    .nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .nav li {
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Main content */
+    .main {
+      overflow-y: auto;
+      padding: 3rem 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      max-width: 800px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Jane Doe</h1>
+    <p class="title">Software Engineer & Designer</p>
+    <ul class="nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
+  <main class="main">
+    <section id="about">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget consequat sem.</p>
+    </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <div>
+        <h3>Senior Engineer @ Company</h3>
+        <p>Describe your role and accomplishments from 2020–2023.</p>
+      </div>
+      <div>
+        <h3>Engineer @ Another Company</h3>
+        <p>Early career highlights here.</p>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div>
+        <h3>Project One</h3>
+        <p>Short description about the project and tech stack.</p>
+      </div>
+      <div>
+        <h3>Project Two</h3>
+        <p>Another placeholder for a featured project.</p>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: janedoe@example.com</p>
+    </section>
+  </main>
+</body>
+</html>
