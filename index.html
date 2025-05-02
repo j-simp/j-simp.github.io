@@ -11,13 +11,10 @@
       --accent-color: #A1866F;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Helvetica Neue', sans-serif;
       background-color: var(--background);
       color: var(--text-color);
@@ -26,24 +23,42 @@
       height: 100vh;
     }
 
+    /* Sidebar */
     .sidebar {
       background-color: var(--accent-color);
       padding: 2rem;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       color: white;
     }
 
-    .sidebar h1 {
+    /* Profile image above name */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid white;
+    }
+    .profile h1 {
+      font-size: 1.8rem;
       margin: 0;
-      font-size: 2rem;
+      text-align: center;
     }
 
     .sidebar p.title {
-      margin: 0.5rem 0 2rem;
+      margin: 0 0 2rem;
       font-size: 1rem;
       font-weight: 300;
+      text-align: center;
     }
 
     .nav {
@@ -52,12 +67,11 @@
       margin: 0;
       width: 100%;
     }
-
     .nav li {
       margin-bottom: 1.5rem;
       width: 100%;
+      text-align: center;
     }
-
     .nav a {
       text-decoration: none;
       color: white;
@@ -72,12 +86,10 @@
       overflow-y: auto;
       padding: 3rem 2rem;
     }
-
     section {
       margin-bottom: 3rem;
       max-width: 800px;
     }
-
     h2 {
       margin-top: 0;
       font-size: 1.5rem;
@@ -85,21 +97,66 @@
       padding-bottom: 0.5rem;
       display: inline-block;
     }
-
     h3 {
       margin: 1rem 0 0.5rem;
       font-size: 1.2rem;
     }
+    p { line-height: 1.6; }
 
-    p {
-      line-height: 1.6;
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        display: block;
+        height: auto;
+      }
+      .sidebar {
+        width: 100%;
+        padding: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .profile {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+      }
+      .profile img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+      }
+      .profile h1 {
+        font-size: 1.2rem;
+      }
+      .sidebar p.title {
+        display: none;
+      }
+      .nav {
+        display: flex;
+        gap: 1rem;
+      }
+      .nav li {
+        margin: 0;
+      }
+      .main {
+        padding: 2rem 1rem;
+      }
+      section {
+        margin-bottom: 2rem;
+      }
     }
   </style>
 </head>
 <body>
   <aside class="sidebar">
-    <h1>Joshua Simpson</h1>
-    <p class="title">CS & Robotics @ Cornell University</p>
+    <div class="profile">
+      <!-- Replace with your image path: -->
+      <img src="images/profile.jpg" alt="Joshua Simpson">
+      <h1>Joshua Simpson</h1>
+    </div>
+    <p class="title">CS &amp; Robotics @ Cornell University</p>
     <ul class="nav">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -162,9 +219,7 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: jjs465@cornell.edu</p>
-      <p><a href="https://github.com/j-simp" target="_blank">Github</a></p>
-      <p><a href="https://www.linkedin.com/in/jjs465/" target="_blank">LinkedIn</a></p>
+      <p><a href="https://github.com/j-simp" target="_blank">GitHub</a> • <a href="https://linkedin.com/in/jjs465" target="_blank">LinkedIn</a></p>
     </section>
   </main>
 </body>
-</html>
